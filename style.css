@@ -1,0 +1,83 @@
+body {
+    background-color: pink;
+    margin: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    min-height: 100vh;
+    font-family: 'Nunito', sans-serif;
+}
+p {
+    font-size: 50px;
+}
+button {
+    color: white;
+    background-color: pink;
+    border: 2px solid;
+    border-radius: 0.5em;
+
+    cursor: pointer; 
+    font-size: 40px;
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background-color 0.2s ease;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+}
+button:hover {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    background-color: #ff9eb5;
+}
+button:active {
+    transform: translateY(0) scale(0.98);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+img {
+    width: 350px;   
+    height: auto;    
+}
+.container {
+    border-radius: 0.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #fff;
+    padding: 80px 120px;
+}
+.button-group {
+  display: flex;       
+  flex-direction: row; 
+  gap: 30px;           
+  justify-content: center; 
+
+  position: relative;
+}
+#noBtn {
+  position: relative;
+    left: auto;
+    top: auto;
+  margin-left: 20px;
+}
+
+#yesBtn {
+  transition: transform 0.3s ease;
+  z-index: 100;
+}
+#yesBtn:hover {
+    transform: scale(1.15);
+}
+#noBtn:hover {
+    animation: shake 0.3s;
+}
+@keyframes shake {
+    0%   { transform: translateX(0); }
+    25%  { transform: translateX(-4px); }
+    50%  { transform: translateX(4px); }
+    75%  { transform: translateX(-4px); }
+    100% { transform: translateX(0); }
+}
